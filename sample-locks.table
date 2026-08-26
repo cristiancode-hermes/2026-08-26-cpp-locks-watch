@@ -1,0 +1,8 @@
+# sample /proc/locks dump with annotations — locks-watch --file sample-locks.table
+# Columnas: id: TYPE MODE ACCESS PID DEV:INODE START END
+ 1: FLOCK  ADVISORY  WRITE 1129 08:01:7424305 0 EOF        # crond: lock exclusivo del log de cron
+ 2: POSIX  ADVISORY  READ  1129 08:01:7425601 128 128      # crond: byte 128 del mismo fichero
+ 3: POSIX  ADVISORY  READ  1129 08:01:7411741 1073741826 1073742335   # crond: rango finito
+ 4: FLOCK  ADVISORY  WRITE 705  08:01:11534517 0 EOF       # nginx: lock del pid file
+ 5: POSIX  ADVISORY  READ  705  08:01:11534492 128 128
+ 6: POSIX  ADVISORY  WRITE 171  00:33:10346627 0 EOF       # postgres: WAL segment
